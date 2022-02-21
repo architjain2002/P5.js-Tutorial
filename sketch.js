@@ -41,7 +41,7 @@ function setup() {
   c = color(255, 0, 0);
   background(255);
   colorMode(RGB);
-  createColorPicker();
+  createColorPickerHandle();
 }
 
 function draw() {
@@ -84,10 +84,10 @@ function mouseDragged() {
 
 function changeBG() {
   background(255);
-  createColorPicker();
+  createColorPickerHandle();
 }
 
-function createColorPicker() {
+function createColorPickerHandle() {
   colorPicker = createImage(100, height);
   var myWidth = colorPicker.width / 3;
   colorPicker.loadPixels();
