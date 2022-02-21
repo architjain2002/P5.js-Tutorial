@@ -32,7 +32,7 @@ var radius;
 var c;
 
 function setup() {
-  createCanvas(500, 400);
+  createCanvas(window.screen.width - 100, window.screen.height - 300);
   createP();
   slider = createSlider(1, 20, 10);
   eraser = createButton("clear");
@@ -76,7 +76,7 @@ function mouseDragged() {
   } else {
     stroke(c);
   }
-  if (mouseX < 390) {
+  if (mouseX < window.screen.width - 300) {
     strokeWeight(slider.value());
     line(mouseX, mouseY, pmouseX, pmouseY);
   }
@@ -119,7 +119,7 @@ function createColorPickerHandle() {
     }
   }
   colorPicker.updatePixels();
-  image(colorPicker, 400, 0);
+  image(colorPicker, window.screen.width - 300, 0);
 }
 
 function stampRectangle(c) {
